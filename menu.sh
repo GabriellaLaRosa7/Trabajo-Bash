@@ -1,5 +1,15 @@
 #!/bin/bash/
 
+if [ "$1" == "-d" ]; then
+	echo "Borrando entorno..."
+
+	rm -rf "$HOME/EPNro1"
+	pkill -f consolidar.sh 2>/dev/null #si hay algún error (salida 2), se redirige a /dev/mull para que no se muestren por pantalla. 
+	
+	echo "Entorno borrado con exito."
+	exit 0
+fi
+
 seguir=1
 
 while [ $seguir -eq 1 ]

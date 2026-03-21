@@ -11,7 +11,7 @@ if [ -f "$archivo" ]; then
    		 echo "No se encontro su numero de padron"
 	fi
 else
-    echo "No existe el archivo $archivo"
+    echo "No existe el archivo "
 fi
 
 #le pido al usuario un padroon y lo guardo en una variable

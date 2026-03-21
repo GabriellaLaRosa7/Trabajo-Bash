@@ -1,12 +1,12 @@
 #!bin/bash
 
 echo "Elegiste la opcion 5"
-read -p "Ingrese un numero de Padron: " padron
 
-archivo="$HOME/EPNro1/salida/$FILENAME"
+archivo="$HOME/EPNro1/salida/$FILENAME.txt"
 
 if [ -f "$archivo" ]; then
-    grep -w "$padron" "$archivo"
+	read -p "Ingrese un numero de Padron: " padron
+    	grep -w "$padron" "$archivo"
 	if ! grep -q "$padron" "$archivo"; then
    		 echo "No se encontro su numero de padron"
 	fi

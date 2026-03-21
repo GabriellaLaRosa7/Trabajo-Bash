@@ -1,8 +1,8 @@
 #!bin/bash
 
 echo "Eligiste la opcion 4"
-if ls  "$HOME/EPNro1/salida/$FILENAME" 1>/dev/null 2>&1; then
-	opcion4=$(cut -d " " -f5,2,3 "$HOME/EPNro1/salida/$FILENAME" |  sort -k3,3nr | head -n 10)
+if ls  "$HOME/EPNro1/salida/$FILENAME.txt" 1>/dev/null 2>&1; then
+	opcion4=$(cut -d " " -f5,2,3 "$HOME/EPNro1/salida/$FILENAME.txt" |  sort -k3,3nr | head -n 10)
 	echo "$opcion4"
 else
     echo "No existen archivos"

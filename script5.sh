@@ -7,7 +7,7 @@ archivo="$HOME/EPNro1/salida/$FILENAME"
 
 if [ -f "$archivo" ]; then
     grep -w "$padron" "$archivo"
-	if ! grep -q "$padron" "$HOME/EPNro1/salida/$FILENAME"; then
+	if ! grep -q "$padron" "$arhcivo"; then
    		 echo "No se encontro su numero de padron"
 	fi
 else

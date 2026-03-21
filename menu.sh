@@ -1,5 +1,7 @@
 #!/bin/bash/
 
+source entorno.sh
+
 if [ "$1" == "-d" ]; then
 	echo "Borrando entorno..."
 
@@ -27,15 +29,17 @@ do
 
 	case $opcion in
 		1)
-			echo "Crear entorno" ;;
+			crear_entorno
+			echo "Entorno creado." ;;
 		2)
-			echo "Correr proceso" ;;
+			bash consolidar.sh & 
+			echo "Corriendo proceso" ;;
 		3)
-			echo "Listar alumnos" ;;
+			bash script3.sh  ;;
 		4)
-			echo "Top 10 notas" ;;
+			bash script4.sh  ;;
 		5)
-			echo "Buscar alumno" ;;
+			bash script5.sh ;;
 		6)
 			echo "Salir" 
 			seguir=0 ;;

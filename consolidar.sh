@@ -1,8 +1,13 @@
-for nombre in entrada/*.txt; do
+while true
+do
+	for nombre in "$HOME/EPNro1/entrada/"*.txt; do
+		[ -e "$nombre" ] || continue
+		[ -e "$HOME/EPNro1/salida/$FILENAME.txt" ] || touch "$HOME/EPNro1/salida/$FILENAME.txt"
+		cat "$nombre">>"$HOME/EPNro1/salida/$FILENAME.txt"
+		mv "$nombre" "$HOME/EPNro1/procesado/"
 
-	cat "$nombre">>salida/"$FILENAME.txt"
-	mv "$nombre" procesado/
-
+	done
+	sleep 5
 done
 
 # La variable nombre, es el nombre de cada archivo que entre en entrada, ya que con entrada/*.txt, vamos a ir seleccionando

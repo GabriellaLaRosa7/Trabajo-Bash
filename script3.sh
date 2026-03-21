@@ -1,7 +1,7 @@
 #!bin/bash
 
 echo "ELegiste la opcion 3"
-if ls "$HOME/EPNro1/salida/$FILENAME"*.txt 1>/dev/null 2>&1; then
+if ls "$HOME/EPNro1/salida/$FILENAME" 1>/dev/null 2>&1; then
 	opcion3=$(cut -d " " -f1,2,3 "$HOME/EPNro1/salida/$FILENAME"*.txt | sort -n )
 	echo "$opcion3"  
 else

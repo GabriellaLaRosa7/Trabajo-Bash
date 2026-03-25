@@ -6,7 +6,8 @@ crear_entorno() {
         echo "Error: El entorno ya existe en $Base"
     else
         mkdir -p "$Base/entrada" "$Base/salida" "$Base/procesado"
-        echo "Entorno creado correctamente en $Base"
+        cp consolidar.sh script3.sh script4.sh script5.sh "$Base"
+	echo "Entorno creado correctamente en $Base"
     fi
 }
 

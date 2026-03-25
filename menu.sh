@@ -7,7 +7,7 @@ if [ "$1" == "-d" ]; then
 
 	rm -rf "$HOME/EPNro1"
 	pkill -f consolidar.sh 2>/dev/null #si hay algún error (salida 2), se redirige a /dev/mull para que no se muestren por pantalla. 
-	
+
 	echo "Entorno borrado con exito."
 	exit 0
 fi
@@ -32,14 +32,14 @@ do
 			crear_entorno
 			echo "Entorno creado." ;;
 		2)
-			bash consolidar.sh & 
+			bash "$HOME/EPNro1/consolidar.sh" & 
 			echo "Corriendo proceso" ;;
 		3)
-			bash script3.sh  ;;
+			bash  "$HOME/EPNro1/script3.sh"  ;;
 		4)
-			bash script4.sh  ;;
+			bash  "$HOME/EPNro1/script4.sh"  ;;
 		5)
-			bash script5.sh ;;
+			bash  "$HOME/EPNro1/script5.sh" ;;
 		6)
 			echo "Salir" 
 			seguir=0 ;;
